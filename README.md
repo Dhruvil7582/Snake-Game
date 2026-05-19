@@ -28,6 +28,7 @@ git clone https://github.com/Dhruvil7582/Snake-Game.git
 - Start Playing!!
 
 <h3> ScreenShots </h3> 
+<img width="1915" height="871" alt="Screenshot 2026-05-19 105920" src="https://github.com/user-attachments/assets/39f4c9e2-6d08-4969-8e3e-df151be4fe87" />
 
 <br>
 
