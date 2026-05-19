@@ -1,0 +1,119 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  background:#080808;
+  font-family:'Press Start 2P',monospace;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:100vh;color:#f0f0f0;
+  background-image:
+    radial-gradient(ellipse at 50% 0%,rgba(180,255,0,0.06) 0%,transparent 60%),
+    repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.08) 3px,rgba(0,0,0,0.08) 4px);
+}
+
+.cabinet{
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+  padding:24px 28px 20px;
+  background:linear-gradient(160deg,#141414,#0e0e0e);
+  border:1px solid #222;border-radius:16px;
+  box-shadow:0 0 60px rgba(180,255,0,0.07),0 0 0 1px #1a1a1a inset;
+  position:relative;
+}
+
+.cabinet::before{
+  content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:60%;height:2px;
+  background:linear-gradient(90deg,transparent,rgba(180,255,0,0.4),transparent);
+  border-radius:2px;
+}
+
+.title{
+  font-size:22px;letter-spacing:8px;
+  color:#c8ff00;
+  text-shadow:0 0 20px rgba(200,255,0,0.4);
+  margin-bottom:2px;
+}
+
+.tagline{font-size:7px;color:#2a2a2a;letter-spacing:4px}
+
+.hud{
+  display:flex;gap:28px;align-items:center;
+  background:#0a0a0a;border:1px solid #1e1e1e;
+  padding:10px 20px;border-radius:8px;width:100%;justify-content:center;
+}
+
+.stat{display:flex;flex-direction:column;align-items:center;gap:5px}
+.stat-label{font-size:7px;color:#333;letter-spacing:2px}
+.stat-val{font-size:15px;min-width:70px;text-align:center;color:#c8ff00}
+.stat-val.hi{color:#ff8c00}
+.stat-val.lv{color:#ff5722}
+
+.divider{width:1px;height:30px;background:#1e1e1e}
+
+#gameArea{
+  display:block;
+  border:1px solid #1e1e1e;border-radius:6px;
+  image-rendering:pixelated;
+}
+
+.controls{display:flex;gap:12px;align-items:center;width:100%;justify-content:center}
+
+.speed-wrap{display:flex;align-items:center;gap:10px;font-size:8px;color:#333}
+
+input[type=range]{
+  -webkit-appearance:none;appearance:none;
+  width:90px;height:3px;background:#1e1e1e;outline:none;border-radius:2px;cursor:pointer;
+}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;width:12px;height:12px;
+  background:#c8ff00;border-radius:50%;cursor:pointer;
+  box-shadow:0 0 6px rgba(200,255,0,0.5);
+}
+input[type=range]::-moz-range-thumb{
+  width:12px;height:12px;background:#c8ff00;border-radius:50%;border:none;cursor:pointer;
+}
+
+.btn{
+  font-family:'Press Start 2P',monospace;font-size:9px;
+  padding:9px 18px;background:transparent;
+  border:1px solid #c8ff00;color:#c8ff00;
+  cursor:pointer;letter-spacing:2px;border-radius:4px;
+  transition:background .1s,color .1s,box-shadow .1s;
+  text-transform:uppercase;
+}
+.btn:hover{background:#c8ff00;color:#000;box-shadow:0 0 12px rgba(200,255,0,0.3)}
+.btn:disabled{border-color:#222;color:#222;cursor:not-allowed;box-shadow:none}
+.btn:disabled:hover{background:transparent;color:#222}
+
+.btn-pause{border-color:#ff8c00;color:#ff8c00}
+.btn-pause:hover{background:#ff8c00;color:#000;box-shadow:0 0 12px rgba(255,140,0,0.3)}
+.btn-pause:disabled{border-color:#222;color:#222}
+.btn-pause:disabled:hover{background:transparent;color:#222}
+
+.touch-pad{
+  display:none;
+  grid-template-columns:repeat(3,48px);
+  grid-template-rows:repeat(2,48px);
+  gap:5px;
+}
+@media(max-width:660px){
+  .touch-pad{display:grid}
+  .cabinet{padding:14px 14px 16px;gap:10px}
+  .title{font-size:14px}
+  .hud{gap:14px;padding:8px 12px}
+  .stat-val{font-size:12px}
+  #gameArea{width:100% !important;height:auto !important}
+}
+
+.touch-btn{
+  font-size:18px;background:#0e0e0e;
+  border:1px solid #222;color:#444;border-radius:6px;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  user-select:none;-webkit-user-select:none;transition:all .08s;
+}
+.touch-btn:active{background:#151515;color:#c8ff00;border-color:#c8ff00}
+.t-up{grid-column:2;grid-row:1}
+.t-left{grid-column:1;grid-row:2}
+.t-down{grid-column:2;grid-row:2}
+.t-right{grid-column:3;grid-row:2}
+
+.key-hint{font-size:7px;color:#1e1e1e;letter-spacing:1px}

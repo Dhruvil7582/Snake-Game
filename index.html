@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SNAKE</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cabinet">
+  <div class="title">◀ SNAKE ▶</div>
+  <div class="tagline">USE ARROW KEYS · EAT · GROW · SURVIVE</div>
+
+  <div class="hud">
+    <div class="stat">
+      <span class="stat-label">SCORE</span>
+      <span class="stat-val" id="scoreEl">0</span>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <span class="stat-label">BEST</span>
+      <span class="stat-val hi" id="hiEl">0</span>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <span class="stat-label">LEVEL</span>
+      <span class="stat-val lv" id="lvEl">1</span>
+    </div>
+    <div class="divider"></div>
+    <div class="stat">
+      <span class="stat-label">LENGTH</span>
+      <span class="stat-val" id="lenEl" style="color:#888">3</span>
+    </div>
+  </div>
+
+  <canvas id="gameArea" width="600" height="400"></canvas>
+
+  <div class="controls">
+    <div class="speed-wrap">
+      <span>SPD</span>
+      <input type="range" id="speedSlider" min="1" max="9" value="5" step="1">
+      <span id="speedNum">5</span>
+    </div>
+    <button class="btn" id="startBtn">START</button>
+    <button class="btn btn-pause" id="pauseBtn" disabled>PAUSE</button>
+  </div>
+
+  <div class="touch-pad">
+    <button class="touch-btn t-up" data-d="up">↑</button>
+    <button class="touch-btn t-left" data-d="left">←</button>
+    <button class="touch-btn t-down" data-d="down">↓</button>
+    <button class="touch-btn t-right" data-d="right">→</button>
+  </div>
+
+  <div class="key-hint">SPACE / P TO PAUSE</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
