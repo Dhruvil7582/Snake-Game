@@ -2,6 +2,10 @@
 
 <p>Simple Snake Game 🐍 written in HTML, CSS, and JavaScript .</p>
 
+
+### Live Demo:
+[Click here to check out the website!](https://dhruvil7582.github.io/Snake-Game/)
+
 ### Use of the Project:
 
 <p>The Snake Game 🐍 is to be played between HUMAN and COMPUTER</p>
